@@ -506,6 +506,22 @@ footer{
 /* ==========================================
    MONTHLY BUDGET
 ========================================== */
+#budgetInput {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #E5E7EB;
+    box-sizing: border-box;
+    background: var(--card);
+    color: var(--text);
+    font-family: Poppins, sans-serif;
+}
+
+#budgetInput:focus{
+    border-color: var(--primary);
+    outline: none;
+}
 
 .budget-section{
 
@@ -537,15 +553,17 @@ footer{
 
     display:flex;
 
-    gap:15px;
+    gap:30px;
 
-    margin-bottom:25px;
+    margin-bottom:40px;
 
 }
 
 .budget-input-group input{
 
     flex:1;
+
+    min-width:0;
 
 }
 
