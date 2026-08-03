@@ -57,7 +57,7 @@ addIncomeBtn.addEventListener("click", () => {
 
     updateDashboard();
     renderTransactions();
-
+    saveData();
     clearIncomeForm();
 
 });
@@ -93,10 +93,54 @@ addExpenseBtn.addEventListener("click", () => {
 
     updateDashboard();
     renderTransactions();
-
+    saveData();
     clearExpenseForm();
 
 });
+
+// ===============================
+// Save Data
+// ===============================
+
+function saveData() {
+
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+
+}
+
+// ===============================
+// Load Data
+// ===============================
+
+function loadData() {
+
+    const savedTransactions = localStorage.getItem("transactions");
+
+    if (savedTransactions) {
+
+        transactions = JSON.parse(savedTransactions);
+
+        totalIncome = 0;
+        totalExpenses = 0;
+
+        transactions.forEach(transaction => {
+
+            if (transaction.type === "income") {
+                totalIncome += transaction.amount;
+            } else {
+                totalExpenses += transaction.amount;
+            }
+
+        });
+
+        updateDashboard();
+        renderTransactions();
+        saveData();
+
+    }
+
+}
+
 
 // ===============================
 // Update Dashboard
@@ -190,6 +234,7 @@ function deleteTransaction(id) {
     updateDashboard();
 
     renderTransactions();
+    saveData();
 
 }
 
