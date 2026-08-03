@@ -3,40 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>BudgetBloom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <header>
+        <h1>💰 BudgetBloom</h1>
+        <p>Track every rupee beautifully.</p>
+    </header>
 
-    <h1>💰 Expense Tracker</h1>
+    <main class="container">
 
-    <div class="input-box">
+        <!-- Dashboard Cards -->
+        <section class="dashboard">
 
-        <input
-            type="text"
-            id="expense-name"
-            placeholder="Expense Name">
+            <div class="card">
+                <h3>Balance</h3>
+                <p id="balance">₹0</p>
+            </div>
 
-        <input
-            type="number"
-            id="expense-amount"
-            placeholder="Amount">
+            <div class="card">
+                <h3>Income</h3>
+                <p id="income">₹0</p>
+            </div>
 
-        <button onclick="addExpense()">
-            Add Expense
-        </button>
+            <div class="card">
+                <h3>Expenses</h3>
+                <p id="expenses">₹0</p>
+            </div>
 
-    </div>
+            <div class="card">
+                <h3>Savings</h3>
+                <p id="savings">₹0</p>
+            </div>
 
-    <h2>Total: ₹<span id="total">0</span></h2>
+        </section>
 
-    <ul id="expense-list"></ul>
+        <!-- Income Form -->
+        <section class="form-card">
 
-</div>
+            <h2>💵 Add Income</h2>
 
-<script src="script.js"></script>
+            <select id="income-source">
+                <option value="">Select Source</option>
+                <option>Pocket Money</option>
+                <option>Internship</option>
+                <option>Salary</option>
+                <option>Freelance</option>
+                <option>Gift</option>
+                <option>Other</option>
+            </select>
+
+            <input type="number" id="income-amount" placeholder="Amount">
+
+            <input type="date" id="income-date">
+
+            <button id="add-income">Add Income</button>
+
+        </section>
+
+        <!-- Expense Form -->
+        <section class="form-card">
+
+            <h2>💸 Add Expense</h2>
+
+            <select id="expense-category">
+                <option value="">Select Category</option>
+                <option>Food 🍕</option>
+                <option>Shopping 🛍️</option>
+                <option>Transport 🚕</option>
+                <option>Entertainment 🎬</option>
+                <option>Bills 💡</option>
+                <option>Education 📚</option>
+                <option>Healthcare 💊</option>
+                <option>Savings 💰</option>
+                <option>Other</option>
+            </select>
+
+            <input type="number" id="expense-amount" placeholder="Amount">
+
+            <input type="date" id="expense-date">
+
+            <input type="text" id="expense-note" placeholder="Notes (optional)">
+
+            <button id="add-expense">Add Expense</button>
+
+        </section>
+
+        <!-- Transactions -->
+        <section class="transactions">
+
+            <h2>📋 Recent Transactions</h2>
+
+            <div id="transaction-list">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
