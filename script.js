@@ -263,5 +263,4 @@ function clearExpenseForm() {
 // Initialize Dashboard
 // ===============================
 
-updateDashboard();
-
+loadData();
