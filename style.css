@@ -502,3 +502,101 @@ footer{
     }
 
 }
+
+/* ==========================================
+   MONTHLY BUDGET
+========================================== */
+
+.budget-section{
+
+    margin-bottom:40px;
+
+}
+
+.budget-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.budget-card h2{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.budget-input-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.budget-input-group input{
+
+    flex:1;
+
+}
+
+.budget-info{
+
+    margin-top:20px;
+
+}
+
+.budget-info p{
+
+    margin:10px 0;
+
+    font-weight:500;
+
+}
+
+.progress-container{
+
+    margin-top:20px;
+
+    width:100%;
+
+    height:18px;
+
+    background:#E5E7EB;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#22C55E;
+
+    transition:.4s;
+
+}
+
+@media(max-width:700px){
+
+    .budget-input-group{
+
+        flex-direction:column;
+
+    }
+
+}
