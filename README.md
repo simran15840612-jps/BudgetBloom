@@ -1,44 +1,94 @@
-# 💰 Expense Tracker
+# 💰 BudgetBloom
 
-A simple Expense Tracker built using HTML, CSS, and JavaScript.
+> **Track every rupee beautifully.**
 
-## ✨ Features
+BudgetBloom is a modern personal finance dashboard that helps users manage their income, expenses, savings, and overall balance through a clean and intuitive interface.
 
-- Add new expenses
-- Delete expenses
-- Automatically calculate the total
-- Clean and responsive user interface
+---
 
-## 🛠️ Built With
+## 🌟 Features
+
+### 💵 Income Management
+- Add income from multiple sources
+- Track total income
+- Record income date
+
+### 💸 Expense Tracking
+- Add expenses with categories
+- View all transactions
+- Delete transactions
+- Automatically update balance
+
+### 📊 Financial Dashboard
+- Current Balance
+- Total Income
+- Total Expenses
+- Total Savings *(Coming Soon)*
+
+### 🎨 User Experience
+- Clean & modern UI
+- Responsive design
+- Easy-to-use dashboard
+- Beginner-friendly interface
+
+---
+
+## 🛠️ Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 
-## 🚀 How to Run
+---
 
-1. Clone this repository.
+## 📂 Folder Structure
+
+```text
+BudgetBloom/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    ├── images/
+    └── icons/
+```
+
+---
+
+## 🚀 Getting Started
+
+1. Clone this repository
+
+```bash
+git clone https://github.com/simran15840612-jps/BudgetBloom.git
+```
+
 2. Open the project folder.
+
 3. Open `index.html` in your browser.
 
-## 📂 Project Structure
+---
 
-```
-Expense-tracker/
-│── index.html
-│── style.css
-│── script.js
-│── README.md
-```
+## 🎯 Future Features
 
-## 🌱 Future Improvements
+- 💾 Local Storage
+- ✏️ Edit Transactions
+- 📅 Monthly Budget Planner
+- 📊 Charts & Analytics
+- 🌙 Dark Mode
+- 📱 Fully Responsive Layout
+- 🔍 Search & Filter Transactions
+- 📤 Export Data (CSV/PDF)
 
-- Save expenses using Local Storage
-- Edit existing expenses
-- Add expense categories
-- Filter expenses
-- Dark mode
-- Charts and analytics
+---
+
+## 📸 Preview
+
+> Screenshot coming soon...
+
+---
 
 ## 👩‍💻 Author
 
