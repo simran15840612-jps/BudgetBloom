@@ -29,22 +29,6 @@ const addExpenseBtn = document.getElementById("add-expense");
 
 const transactionList = document.getElementById("transaction-list");
 
-// Dashboard Elements
-
-const balanceElement = document.getElementById("balance");
-const incomeElement = document.getElementById("income");
-const expenseElement = document.getElementById("expenses");
-const savingsElement = document.getElementById("savings");
-
-// Buttons
-
-const addIncomeBtn = document.getElementById("add-income");
-const addExpenseBtn = document.getElementById("add-expense");
-
-// Transaction List
-
-const transactionList = document.getElementById("transaction-list");
-
 // ===============================
 // Monthly Budget Elements
 // ===============================
@@ -85,6 +69,7 @@ addIncomeBtn.addEventListener("click", () => {
     totalIncome += amount;
 
     updateDashboard();
+    updateBudget();
     renderTransactions();
     saveData();
     clearIncomeForm();
@@ -121,13 +106,14 @@ addExpenseBtn.addEventListener("click", () => {
     totalExpenses += amount;
 
     updateDashboard();
+    updateBudget();
     renderTransactions();
     saveData();
     clearExpenseForm();
 
 });
 
-saveBudgetBtn.addEventListener(() => {
+saveBudgetBtn.addEventListener("click", () => {
 
     const amount = Number(budgetInput.value);
 
@@ -163,11 +149,15 @@ function saveData() {
 function loadData() {
 
     const savedTransactions = localStorage.getItem("transactions");
+    const savedBudget = localStorage.getItem("monthlyBudget");
+
+    if (savedBudget) {
+        monthlyBudget = Number(savedBudget);
+    }
 
     if (savedTransactions) {
 
         transactions = JSON.parse(savedTransactions);
-        monthlyBudget = Number(savedBudget);
         totalIncome = 0;
         totalExpenses = 0;
 
@@ -181,11 +171,11 @@ function loadData() {
 
         });
 
-        updateDashboard();
-        renderTransactions();
-        saveData();
-
     }
+
+    updateDashboard();
+    updateBudget();
+    renderTransactions();
 
 }
 
@@ -197,6 +187,8 @@ function loadData() {
 function updateDashboard() {
 
     const balance = totalIncome - totalExpenses;
+
+    totalSavings = balance > 0 ? balance : 0;
 
     balanceElement.textContent = `₹${balance}`;
     incomeElement.textContent = `₹${totalIncome}`;
@@ -326,7 +318,7 @@ function deleteTransaction(id) {
     transactions = transactions.filter(item => item.id !== id);
 
     updateDashboard();
-
+    updateBudget();
     renderTransactions();
     saveData();
 
