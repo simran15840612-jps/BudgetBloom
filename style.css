@@ -600,3 +600,58 @@ footer{
     }
 
 }
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark{
+
+    --background:#111827;
+
+    --card:#1F2937;
+
+    --text:#F9FAFB;
+
+    --grey:#D1D5DB;
+
+    --shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+body.dark{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+body.dark .card,
+body.dark .form-card,
+body.dark .budget-card,
+body.dark .analytics,
+body.dark .transaction-card{
+
+    background:var(--card);
+
+    color:var(--text);
+
+}
+
+body.dark input,
+body.dark select{
+
+    background:#374151;
+
+    color:white;
+
+    border:2px solid #4B5563;
+
+}
+
+body.dark footer{
+
+    color:#D1D5DB;
+
+}
