@@ -182,3 +182,87 @@ header h1{
     color:#F25F5C;
     font-weight:600;
 }
+
+/* Hero */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:40px auto;
+}
+
+.hero h1{
+font-size:2.8rem;
+color:#7C5CFC;
+}
+
+.hero p{
+color:#6B7280;
+margin-top:8px;
+}
+
+.theme-btn{
+width:55px;
+height:55px;
+border-radius:50%;
+font-size:22px;
+}
+
+/* Dashboard Colors */
+
+.balance-card{
+border-top:6px solid #7C5CFC;
+}
+
+.income-card{
+border-top:6px solid #22C55E;
+}
+
+.expense-card{
+border-top:6px solid #EF4444;
+}
+
+.savings-card{
+border-top:6px solid #FACC15;
+}
+
+/* Forms */
+
+.forms{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-bottom:40px;
+}
+
+.card span{
+font-size:35px;
+}
+
+.transaction-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#fff;
+border-radius:16px;
+margin-bottom:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.forms{
+grid-template-columns:1fr;
+}
+
+.hero{
+flex-direction:column;
+gap:20px;
+text-align:center;
+}
+
+}

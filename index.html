@@ -1,110 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BudgetBloom</title>
+    <title>🌸 BudgetBloom</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <h1>💰 BudgetBloom</h1>
-        <p>Track every rupee beautifully.</p>
+    <!-- ================= HEADER ================= -->
+
+    <header class="hero">
+
+        <div class="hero-text">
+            <h1>🌸 BudgetBloom</h1>
+            <p>Track every rupee beautifully.</p>
+        </div>
+
+        <button class="theme-btn">
+            🌙
+        </button>
+
     </header>
+
+
+
+    <!-- ================= MAIN ================= -->
 
     <main class="container">
 
-        <!-- Dashboard Cards -->
+
+
+        <!-- ================= DASHBOARD ================= -->
+
         <section class="dashboard">
 
-            <div class="card">
-                <h3>Balance</h3>
+            <div class="card balance-card">
+                <span>💳</span>
+                <h3>Current Balance</h3>
                 <p id="balance">₹0</p>
             </div>
 
-            <div class="card">
-                <h3>Income</h3>
+            <div class="card income-card">
+                <span>📈</span>
+                <h3>Total Income</h3>
                 <p id="income">₹0</p>
             </div>
 
-            <div class="card">
-                <h3>Expenses</h3>
+            <div class="card expense-card">
+                <span>📉</span>
+                <h3>Total Expenses</h3>
                 <p id="expenses">₹0</p>
             </div>
 
-            <div class="card">
-                <h3>Savings</h3>
+            <div class="card savings-card">
+                <span>💰</span>
+                <h3>Total Savings</h3>
                 <p id="savings">₹0</p>
             </div>
 
         </section>
 
-        <!-- Income Form -->
-        <section class="form-card">
 
-            <h2>💵 Add Income</h2>
 
-            <select id="income-source">
-                <option value="">Select Source</option>
-                <option>Pocket Money</option>
-                <option>Internship</option>
-                <option>Salary</option>
-                <option>Freelance</option>
-                <option>Gift</option>
-                <option>Other</option>
-            </select>
+        <!-- ================= FORMS ================= -->
 
-            <input type="number" id="income-amount" placeholder="Amount">
+        <section class="forms">
 
-            <input type="date" id="income-date">
 
-            <button id="add-income">Add Income</button>
 
-        </section>
+            <!-- Income -->
 
-        <!-- Expense Form -->
-        <section class="form-card">
+            <div class="form-card">
 
-            <h2>💸 Add Expense</h2>
+                <h2>💵 Add Income</h2>
 
-            <select id="expense-category">
-                <option value="">Select Category</option>
-                <option>Food 🍕</option>
-                <option>Shopping 🛍️</option>
-                <option>Transport 🚕</option>
-                <option>Entertainment 🎬</option>
-                <option>Bills 💡</option>
-                <option>Education 📚</option>
-                <option>Healthcare 💊</option>
-                <option>Savings 💰</option>
-                <option>Other</option>
-            </select>
+                <label>Income Source</label>
 
-            <input type="number" id="expense-amount" placeholder="Amount">
+                <select id="income-source">
 
-            <input type="date" id="expense-date">
+                    <option value="">Select Source</option>
 
-            <input type="text" id="expense-note" placeholder="Notes (optional)">
+                    <option>Pocket Money</option>
 
-            <button id="add-expense">Add Expense</button>
+                    <option>Internship</option>
 
-        </section>
+                    <option>Salary</option>
 
-        <!-- Transactions -->
-        <section class="transactions">
+                    <option>Freelance</option>
 
-            <h2>📋 Recent Transactions</h2>
+                    <option>Gift</option>
 
-            <div id="transaction-list">
+                    <option>Business</option>
+
+                    <option>Other</option>
+
+                </select>
+
+
+                <label>Amount</label>
+
+                <input
+                    type="number"
+                    id="income-amount"
+                    placeholder="₹ Enter Amount">
+
+
+                <label>Date</label>
+
+                <input
+                    type="date"
+                    id="income-date">
+
+
+                <button id="add-income">
+
+                    + Add Income
+
+                </button>
+
+            </div>
+
+
+
+
+
+            <!-- Expense -->
+
+            <div class="form-card">
+
+                <h2>💸 Add Expense</h2>
+
+                <label>Category</label>
+
+                <select id="expense-category">
+
+                    <option value="">Select Category</option>
+
+                    <option>🍕 Food</option>
+
+                    <option>🛍 Shopping</option>
+
+                    <option>🚕 Transport</option>
+
+                    <option>🎬 Entertainment</option>
+
+                    <option>💡 Bills</option>
+
+                    <option>📚 Education</option>
+
+                    <option>🏥 Healthcare</option>
+
+                    <option>🎁 Gifts</option>
+
+                    <option>📱 Subscriptions</option>
+
+                    <option>🏠 Rent</option>
+
+                    <option>✈️ Travel</option>
+
+                    <option>Other</option>
+
+                </select>
+
+
+
+                <label>Amount</label>
+
+                <input
+                    type="number"
+                    id="expense-amount"
+                    placeholder="₹ Enter Amount">
+
+
+                <label>Date</label>
+
+                <input
+                    type="date"
+                    id="expense-date">
+
+
+                <label>Notes</label>
+
+                <input
+                    type="text"
+                    id="expense-note"
+                    placeholder="Example: Domino's Pizza">
+
+
+                <button id="add-expense">
+
+                    + Add Expense
+
+                </button>
 
             </div>
 
         </section>
 
+
+
+
+
+        <!-- ================= RECENT TRANSACTIONS ================= -->
+
+        <section class="transactions">
+
+            <div class="section-title">
+
+                <h2>📋 Recent Transactions</h2>
+
+                <p>Your latest income and expenses will appear here.</p>
+
+            </div>
+
+            <div id="transaction-list">
+
+                <!-- JavaScript adds transactions here -->
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- ================= ANALYTICS (COMING SOON) ================= -->
+
+        <section class="analytics">
+
+            <h2>📊 Analytics</h2>
+
+            <p>Coming Soon...</p>
+
+        </section>
+
+
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+
+                Made with ❤️ by <strong>Simran Singh</strong>
+
+            </p>
+
+        </footer>
+
+
+
     </main>
+
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
