@@ -6,6 +6,7 @@
 let totalIncome = 0;
 let totalExpenses = 0;
 let totalSavings = 0;
+let monthlyBudget = 0;
 
 // Stores every transaction
 let transactions = [];
@@ -27,6 +28,34 @@ const addExpenseBtn = document.getElementById("add-expense");
 // Transaction List
 
 const transactionList = document.getElementById("transaction-list");
+
+// Dashboard Elements
+
+const balanceElement = document.getElementById("balance");
+const incomeElement = document.getElementById("income");
+const expenseElement = document.getElementById("expenses");
+const savingsElement = document.getElementById("savings");
+
+// Buttons
+
+const addIncomeBtn = document.getElementById("add-income");
+const addExpenseBtn = document.getElementById("add-expense");
+
+// Transaction List
+
+const transactionList = document.getElementById("transaction-list");
+
+// ===============================
+// Monthly Budget Elements
+// ===============================
+
+const budgetInput = document.getElementById("budget-input");
+const saveBudgetBtn = document.getElementById("save-budget");
+
+const budgetTotal = document.getElementById("budget-total");
+const budgetRemaining = document.getElementById("budget-remaining");
+const budgetUsed = document.getElementById("budget-used");
+const progressBar = document.getElementById("progress-bar");
 
 // ===============================
 // Add Income
@@ -98,6 +127,25 @@ addExpenseBtn.addEventListener("click", () => {
 
 });
 
+saveBudgetBtn.addEventListener(() => {
+
+    const amount = Number(budgetInput.value);
+
+    if (amount <= 0) {
+        alert("Please enter a valid budget.");
+        return;
+    }
+
+    monthlyBudget = amount;
+
+    updateBudget();
+
+    saveData();
+
+    budgetInput.value = "";
+
+});
+
 // ===============================
 // Save Data
 // ===============================
@@ -105,7 +153,7 @@ addExpenseBtn.addEventListener("click", () => {
 function saveData() {
 
     localStorage.setItem("transactions", JSON.stringify(transactions));
-
+    localStorage.setItem("monthlyBudget", monthlyBudget);
 }
 
 // ===============================
@@ -119,7 +167,7 @@ function loadData() {
     if (savedTransactions) {
 
         transactions = JSON.parse(savedTransactions);
-
+        monthlyBudget = Number(savedBudget);
         totalIncome = 0;
         totalExpenses = 0;
 
@@ -154,6 +202,52 @@ function updateDashboard() {
     incomeElement.textContent = `₹${totalIncome}`;
     expenseElement.textContent = `₹${totalExpenses}`;
     savingsElement.textContent = `₹${totalSavings}`;
+
+}
+
+function updateBudget() {
+
+    budgetTotal.textContent = `₹${monthlyBudget}`;
+
+    const remaining = monthlyBudget - totalExpenses;
+
+    budgetRemaining.textContent = `₹${remaining}`;
+
+    let percentage = 0;
+
+    if (monthlyBudget > 0) {
+
+        percentage = (totalExpenses / monthlyBudget) * 100;
+
+    }
+
+    if (percentage > 100) {
+
+        percentage = 100;
+
+    }
+
+    budgetUsed.textContent = `${percentage.toFixed(1)}%`;
+
+    progressBar.style.width = percentage + "%";
+
+    if (percentage < 50) {
+
+        progressBar.style.background = "#22C55E";
+
+    }
+
+    else if (percentage < 80) {
+
+        progressBar.style.background = "#FACC15";
+
+    }
+
+    else {
+
+        progressBar.style.background = "#EF4444";
+
+    }
 
 }
 
