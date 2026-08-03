@@ -511,12 +511,13 @@ footer{
     height: 50px;
     padding: 10px 15px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 2px solid #E5E7EB;
     box-sizing: border-box;
     background: var(--card);
     color: var(--text);
     font-family: Poppins, sans-serif;
+    writing-mode: vertical;
 }
 
 #budgetInput:focus{
