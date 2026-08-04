@@ -33,7 +33,7 @@ const transactionList = document.getElementById("transaction-list");
 // Monthly Budget Elements
 // ===============================
 
-const budget-Input = document.getElementById("budget-Input");
+const budgetinput = document.getElementById("budget-input");
 const saveBudgetBtn = document.getElementById("save-budget");
 
 const budgetTotal = document.getElementById("budget-total");
@@ -115,8 +115,7 @@ addExpenseBtn.addEventListener("click", () => {
 
 saveBudgetBtn.addEventListener("click", () => {
 
-    const amount = Number(budget-Input.value);
-
+    const amount = Number(budgetinput.value);
     if (amount <= 0) {
         alert("Please enter a valid budget.");
         return;
@@ -128,7 +127,7 @@ saveBudgetBtn.addEventListener("click", () => {
 
     saveData();
 
-    budget-Input.value = "";
+    budgetinput.value = "";
 
 });
 
