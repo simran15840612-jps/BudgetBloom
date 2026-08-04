@@ -519,7 +519,7 @@ footer{
     font-family: Poppins, sans-serif;
 }
 
-#budgetInput:focus{
+#budget-Input:focus{
     border-color: var(--primary);
     outline: none;
 }
@@ -550,7 +550,7 @@ footer{
 
 }
 
-.budget-input-group{
+.budget-Input-group{
 
     display:flex;
 
@@ -560,7 +560,7 @@ footer{
 
 }
 
-.budget-input-group input{
+.budget-Input-group input{
     width:100%;
     flex:1;
 
@@ -610,7 +610,7 @@ footer{
 
 @media(max-width:700px){
 
-    .budget-input-group{
+    .budget-Input-group{
 
         flex-direction:column;
 
