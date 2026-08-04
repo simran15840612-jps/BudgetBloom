@@ -1,92 +1,81 @@
-# 💰 BudgetBloom
+# 🌸 BudgetBloom
 
-> **Track every rupee beautifully.**
-
-BudgetBloom is a modern personal finance dashboard that helps users manage their income, expenses, savings, and overall balance through a clean and intuitive interface.
+A modern and user-friendly personal finance tracker built with **HTML, CSS, and JavaScript**. BudgetBloom helps users manage their income, expenses, savings, and monthly budget with a clean and responsive interface.
 
 ---
 
-## 🌟 Features
+## ✨ Features
 
-### 💵 Income Management
-- Add income from multiple sources
-- Track total income
-- Record income date
-
-### 💸 Expense Tracking
-- Add expenses with categories
-- View all transactions
-- Delete transactions
-- Automatically update balance
-
-### 📊 Financial Dashboard
-- Current Balance
-- Total Income
-- Total Expenses
-- Total Savings *(Coming Soon)*
-
-### 🎨 User Experience
-- Clean & modern UI
-- Responsive design
-- Easy-to-use dashboard
-- Beginner-friendly interface
+- 💰 Add and track income
+- 💸 Add and manage expenses
+- 🎯 Set a monthly budget goal
+- 📊 Visual budget progress bar
+- 💵 Automatic balance calculation
+- 🌙 Dark Mode
+- 💾 Data saved using Local Storage
+- 📱 Responsive design for different screen sizes
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Built With
 
 - HTML5
 - CSS3
 - JavaScript (ES6)
+- Local Storage API
 
 ---
 
-## 📂 Folder Structure
+## 📂 Project Structure
 
-```text
+```
 BudgetBloom/
+│── assets/
+│   ├── logo.png
+│   └── favicon.png
 │
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets/
-    ├── images/
-    └── icons/
+│── index.html
+│── style.css
+│── script.js
+│── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run
 
-1. Clone this repository
-
-```bash
-git clone https://github.com/simran15840612-jps/BudgetBloom.git
-```
-
-2. Open the project folder.
-
-3. Open `index.html` in your browser.
-
----
-
-## 🎯 Future Features
-
-- 💾 Local Storage
-- ✏️ Edit Transactions
-- 📅 Monthly Budget Planner
-- 📊 Charts & Analytics
-- 🌙 Dark Mode
-- 📱 Fully Responsive Layout
-- 🔍 Search & Filter Transactions
-- 📤 Export Data (CSV/PDF)
+1. Clone or download this repository.
+2. Open the project in **Visual Studio Code**.
+3. Open `index.html` using **Live Server**.
+4. Start tracking your finances!
 
 ---
 
 ## 📸 Preview
 
-> Screenshot coming soon...
+> Add a screenshot of your website here after uploading it to GitHub.
+
+Example:
+
+```
+assets/screenshot.png
+```
+
+Then use:
+
+```markdown
+![BudgetBloom Preview](assets/screenshot.png)
+```
+
+---
+
+## 🎯 Future Improvements
+
+- 📈 Expense Analytics & Charts
+- 📝 Edit Transactions
+- 🔍 Search & Filter Transactions
+- 📤 Export Data
+- ☁️ Cloud Sync
 
 ---
 
@@ -94,4 +83,10 @@ git clone https://github.com/simran15840612-jps/BudgetBloom.git
 
 **Simran Singh**
 
-GitHub: https://github.com/simran15840612-jps
+Built as a frontend web development project to practice HTML, CSS, JavaScript, Git, and GitHub.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
