@@ -507,17 +507,30 @@ footer{
    MONTHLY BUDGET
 ========================================== */
 #budget-input {
-    width: 100%;
+    width: 100px;
     height: 50px;
-    padding: 10px 15px;
+    padding: 10px 16px;  
     font-size: 18px;
     border-radius: 12px;
     border: 2px solid #E5E7EB;
     box-sizing: border-box;
     background: var(--card);
-    color: var(--text);
+    color: #8962d9;
+    caret-color: #8962d9;
     font-family: Poppins, sans-serif;
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
+#budget-input::-webkit-outer-spin-button,
+#budget-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
 
 #budget-input:focus{
     border-color: var(--primary);
